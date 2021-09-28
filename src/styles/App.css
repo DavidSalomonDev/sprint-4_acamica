@@ -1,0 +1,19 @@
+.App {
+	align-items: center;
+	background-color: #2e132c;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	text-align: center;
+}
+
+.App img {
+	height: 40rem;
+	width: 40rem;
+}
+
+.App h3 {
+	color: white;
+	font-size: 2rem;
+}
