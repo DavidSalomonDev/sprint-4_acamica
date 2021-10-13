@@ -1,10 +1,13 @@
+//import Login from './pages/Login'
+import Home from './pages/Home';
 import './styles/App.css';
+
 
 function App() {
   return (
     <div className="App">
-		<img src="./images/logo big.svg" alt="Devs_United" />
-		<h3>Under construction</h3>
+		{/* <Login /> */}
+		<Home />
     </div>
   );
 }
