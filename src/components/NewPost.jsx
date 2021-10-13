@@ -31,7 +31,7 @@ const NewPost = () => {
       <div className = 'NewPost-space wrapper'>
         <div className = 'NewPost-picContainer'>
           <img className = 'NewPost-pic profile-pic'
-               src = 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/profile-of-a-cat-nina-pearman.jpg'
+               src = 'https://www.teahub.io/photos/full/364-3646944_cool-profile-pictures-hd-pic-hwb37635-cat-with.jpg'
                alt = 'Cat Profile pic' />
         </div>
         <form className = 'NewPost-form' onSubmit = {handleSubmit}>

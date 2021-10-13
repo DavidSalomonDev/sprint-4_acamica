@@ -28,8 +28,19 @@ const PostsList = () => {
   const postsDB = getPosts.map((post, idx) => {
     return (
       <div className = 'Post-Container wrapper' key = {post.id}>
-        <div>{post.username} - {postDate(post.date)}</div>
-        <div>{post.content}</div>
+        <div className = 'Post-profilepic'>
+          <img src = 'https://www.teahub.io/photos/full/364-3646944_cool-profile-pictures-hd-pic-hwb37635-cat-with.jpg'
+               alt = 'Cat profile pic'
+               className = 'post-pic' />
+        </div>
+        <div className = 'Post-content'>
+          <div className = 'Content-stats'>
+            <span className = 'stats-username'>{post.username}</span> - <span className = 'stats-date'>{postDate(post.date)}</span>
+          </div>
+          <div className='Content-info'>{post.content}</div>
+          <div className='Content-likes'>{post.likes}</div>
+        </div>
+
       </div>
     )
   })
