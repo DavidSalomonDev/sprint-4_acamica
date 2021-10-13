@@ -4,10 +4,10 @@ import './styles/Navbar.css'
 const Navbar = () => {
 	return (
 		<header className='Header'>
-			<nav className='Navbar'>
+			<nav className='Navbar wrapper'>
 				<li className='Navbar-item'>
-					<Link className='Navbar-item-home' to='/' title='Home'>
-						<img src='https://firebasestorage.googleapis.com/v0/b/devs-united-f1635.appspot.com/o/favicon.ico?alt=media&token=0ed9a2ae-1647-44fb-903a-67cc539687f5' alt='Home'/>
+					<Link to='/' title='Home'>
+						<img className='Navbar-item-home' src='https://firebasestorage.googleapis.com/v0/b/devs-united-f1635.appspot.com/o/favicon.ico?alt=media&token=0ed9a2ae-1647-44fb-903a-67cc539687f5' alt='Home'/>
 					</Link>
 				</li>
 				<li className='Navbar-item Navbar-item-logo'>

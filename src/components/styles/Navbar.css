@@ -2,9 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
+  height: 5rem;
   width: 100%;
-  position: fixed;
   top: 0;
 }
 
@@ -12,9 +11,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  width: 70rem;
   justify-content: space-around;
-  background-color: black;
 }
 
 .Navbar-item {
@@ -26,7 +23,7 @@
   height: 100%;
 }
 
-.Navbar-item-home img {
+.Navbar-item-home {
   width: 3rem;
   height: 2.5rem;
 }

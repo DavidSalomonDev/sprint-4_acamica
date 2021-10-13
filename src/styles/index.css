@@ -35,3 +35,7 @@ h6 {
   font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
 }
+
+.wrapper {
+  width: 70rem;
+}
