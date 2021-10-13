@@ -1,13 +1,13 @@
-import NewPost from "../components/NewPost"
-import PostsList from "../components/PostsList"
+import NewPost from '../components/NewPost'
+import PostsList from '../components/PostsList'
 
 const Posts = () => {
-	return (
-		<main>
-			<NewPost />
-			<PostsList />
-		</main>
-	)
+  return (
+    <main>
+      <NewPost />
+      <PostsList />
+    </main>
+  )
 }
 
 export default Posts

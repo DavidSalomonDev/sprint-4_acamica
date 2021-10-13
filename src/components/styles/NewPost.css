@@ -1,74 +1,92 @@
 .NewPost {
-  background-color: #150714;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border-bottom: 3px #60265b solid;
+	align-items: center;
+	background-color: #150714;
+	border-bottom: 3px #60265B solid;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 
 .NewPost-space {
-  display: flex;
-  justify-content: space-around;
-  margin: 2rem 0;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 2rem 0;
 }
 
 .NewPost-form {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .form-input {
-  width: 50rem;
-  height: 12rem;
-  background-color: #2f112d;
-  border: none;
-  padding: 1rem;
-  color: #fff;
-  font-size: 1.6rem;
-  resize: none;
+	background-color: #2F112D;
+	border: none;
+	color: #FFF;
+	font-size: 1.6rem;
+	height: 12rem;
+	padding: 1rem;
+	resize: none;
+	width: 50rem;
 }
 
 .form-input::placeholder {
-  color: #914d8b;
-  font-family: inherit;
-  font-size: 1.8rem;
+	color: #914D8B;
+	font-family: inherit;
+	font-size: 1.8rem;
 }
 
 .form-input:focus {
-  outline: none;
+	outline: none;
 }
 
 .form-stats {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1rem 0;
-  font-size: 1.4rem;
+	align-items: center;
+	display: flex;
+	font-size: 1.4rem;
+	justify-content: space-between;
+	margin: 1rem 0;
 }
 
 .form-max {
-  color: #f50d5a;
+	color: #F50D5A;
 }
 
 .form-button {
-  color: #150714;
-  background-color: #2f112d;
-  width: 10rem;
-  height: 3.5rem;
-  border: none;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  align-self: end;
+	align-self: end;
+	background-color: #2F112D;
+	border: none;
+	color: #150714;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 1.5rem;
+	height: 3.5rem;
+	text-transform: uppercase;
+	width: 10rem;
 }
 
 .form-button:hover {
-  color: #fff;
+	color: #FFF;
 }
 
 .form-progressbar {
-  background-color: #00da76;
-  height: 0.5rem;
+	background-color: #00DA76;
+	height: 0.5rem;
+}
+
+.NewPost-picContainer {
+	align-items: center;
+	border: .3rem solid #FFF;
+	border-radius: 50%;
+	display: flex;
+	height: 5rem;
+	justify-content: center;
+	margin-left: 5rem;
+	overflow: hidden;
+	width: 5rem;
+}
+
+.NewPost-pic {
+	height: auto;
+	object-fit: cover;
+	width: 100%;
 }

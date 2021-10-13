@@ -3,27 +3,28 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-weight: normal;
-  position: relative;
+	box-sizing: border-box;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	position: relative;
 }
 
 html {
-  color: #fff;
-  font-size: 62.5%;
+	color: #FFF;
+	font-size: 62.5%;
 }
 
 body {
-  font-family: 'Fira code', monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background-color: #2E132C;
+	font-family: 'Fira code', monospace;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+	monospace;
 }
 
 h1,
@@ -32,10 +33,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Press Start 2P', cursive;
-  text-transform: uppercase;
+	font-family: 'Press Start 2P', cursive;
+	text-transform: uppercase;
 }
 
 .wrapper {
-  width: 70rem;
+	width: 70rem;
 }
