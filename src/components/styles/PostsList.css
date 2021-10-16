@@ -1,59 +1,59 @@
 .PostsList {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	overflow: scroll;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: scroll;
 }
 
 .Post-Container {
-	align-items: center;
-	border-bottom: 3px solid #60265B;
-	display: flex;
-	min-height: 15rem;
+  align-items: center;
+  border-bottom: 3px solid #60265b;
+  display: flex;
+  min-height: 15rem;
 }
 
 .Post-profilepic {
-	align-items: center;
-	border-radius: 50%;
-	display: flex;
-	height: 6rem;
-	justify-content: center;
-	margin-left: 5rem;
-	overflow: hidden;
-	width: 6rem;
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 6rem;
+  justify-content: center;
+  margin-left: 5rem;
+  overflow: hidden;
+  width: 6rem;
 }
 
 .Post-profilepic .post-pic {
-	height: 100%;
-	object-fit: contain;
+  height: 100%;
+  object-fit: contain;
 }
 
 .Post-content {
-	align-items: start;
-	display: flex;
-	flex-direction: column;
-	margin-left: 5rem;
-	font-size: 1.5rem;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  font-size: 1.5rem;
 }
 
 .Post-content .Content-stats {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .Post-content .Content-stats .stats-username {
-	background-color: yellow;
-	color: #2E132C;
-	font-family: 'Press Start 2P', cursive;
-	padding-block: .5rem;
-	border-radius: .3rem;
+  background-color: yellow;
+  color: #2e132c;
+  font-family: 'Press Start 2P', cursive;
+  padding-block: 0.5rem;
+  border-radius: 0.3rem;
 }
 
-.Post-content .Content-stats .stats-date{
-	padding: 1rem;
+.Post-content .Content-stats .stats-date {
+  padding: 1rem;
 }
 
-.Content-likes{
-	color: #F50D5A;
-	margin-top: 2rem;
+.Content-likes {
+  color: #f50d5a;
+  margin-top: 2rem;
 }

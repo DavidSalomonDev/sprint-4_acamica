@@ -1,5 +1,5 @@
-import { db } from '../services/firebase'
-import { collection, getDocs } from 'firebase/firestore/lite'
+import db from '../services/firebase'
+import { collection, getDocs } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import postDate from '../utils/postDate'
 import sortDate from '../utils/sortDate'
@@ -8,24 +8,22 @@ import './styles/PostsList.css'
 const PostsList = () => {
   const [getPosts, setGetPosts] = useState([])
 
-  const fetchData = async () => {
-    const postsArray = []
-    const postsCollection = collection(db, 'posts')
-    getDocs(postsCollection).then(posts => {
-      posts.forEach(post => {
-        let date = new Date(post.data().date.toDate())
-        postsArray.push({ ...post.data(), id: post.id, date })
-      })
-      const sortedArray = sortDate(postsArray)
-      setGetPosts(sortedArray)
-    })
-  }
-
   useEffect(() => {
-    fetchData()
+    const fetchData = async () =>{
+		const postsArray = []
+		const postsCollection = collection(db, 'posts')
+		const documents = await getDocs(postsCollection)
+		documents.forEach(document =>{
+			let date = new Date(document.data().date.toDate())
+			postsArray.push({...document.data(), id: document.id, date})
+		})
+		const sortedArray = sortDate(postsArray)
+      	setGetPosts(sortedArray)
+	}
+	fetchData()
   }, [])
 
-  const postsDB = getPosts.map((post, idx) => {
+  const postsDB = getPosts.map((post) => {
     return (
       <div className = 'Post-Container wrapper' key = {post.id}>
         <div className = 'Post-profilepic'>
