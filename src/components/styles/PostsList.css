@@ -4,37 +4,40 @@
   flex-direction: column;
   justify-content: center;
   overflow: scroll;
+  margin: 0 auto;
 }
 
 .Post-Container {
   align-items: center;
   border-bottom: 3px solid #60265b;
   display: flex;
-  min-height: 15rem;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
 }
 
 .Post-profilepic {
-  align-items: center;
-  border-radius: 50%;
   display: flex;
-  height: 6rem;
-  justify-content: center;
-  margin-left: 5rem;
   overflow: hidden;
-  width: 6rem;
+  min-width: 20%;
+  justify-content: center;
+  height: 100%;
 }
 
-.Post-profilepic .post-pic {
-  height: 100%;
-  object-fit: contain;
+.post-pic {
+  height: 7rem;
+  object-fit: cover;
+  width: 7rem;
+  border-radius: 50%;
 }
 
 .Post-content {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin-left: 5rem;
   font-size: 1.5rem;
+  width: 80%;
+  text-align: left;
 }
 
 .Post-content .Content-stats {

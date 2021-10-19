@@ -25,7 +25,7 @@ const PostsList = () => {
 
   const postsDB = getPosts.map((post) => {
     return (
-      <div className = 'Post-Container wrapper' key = {post.id}>
+      <div className = 'Post-Container' key = {post.id}>
         <div className = 'Post-profilepic'>
           <img src = 'https://www.teahub.io/photos/full/364-3646944_cool-profile-pictures-hd-pic-hwb37635-cat-with.jpg'
                alt = 'Cat profile pic'
@@ -44,7 +44,7 @@ const PostsList = () => {
   })
 
   return (
-    <div className = 'PostsList'>
+    <div className = 'PostsList wrapper'>
       {postsDB}
     </div>
   )
