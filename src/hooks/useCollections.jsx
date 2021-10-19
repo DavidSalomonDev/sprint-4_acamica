@@ -1,37 +1,36 @@
-import { useState,useEffect } from "react";
+import { collection, getDocs } from 'firebase/firestore'
+import { useEffect, useState } from 'react'
+import sortDate from '../utils/sortDate'
 
-const useCollections = (collectionPath, db) => {
-	const [isLoading, setIsLoading] = useState(false)
-	const [isError, setIsError] = useState(false)
-	const [data, setData] = useState({})
+const useCollection = (db, collectionName) => {
+  const [data, setData] = useState([])
+  const [error, setError] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
 
-	useEffect(()=>{
-		(async () => {
-			setIsLoading(true)
+  const getData = async (db, collectionName) => {
+    setIsLoading(true)
+    try {
+      const dataArray = []
+      const collectionDocs = collection(db, collectionName)
+      const documents = await getDocs(collectionDocs)
+      documents.forEach((document) => {
+        let date = new Date(document.data().date.toDate())
+        dataArray.push({ ...document.data(), id: document.id, date })
+      })
+      const sortedArray = sortDate(dataArray)
+      setData(sortedArray)
+    } catch (error) {
+      console.error('Error from collection', error)
+      setError(error.message)
+    }
+    setIsLoading(false)
+  }
 
-			const getCollections = await db.collection(collectionPath)
-			.orderBy('id')
-			.onSnapshot( (snapshot) => {
-				if(snapshot.size){
-					let data = []
-					snapshot.forEach((doc) => {
-						data.push({...doc.data(), uid: doc.id})
-					})
-					setData(data)
-					setIsLoading(false)
-				}else{
-					setIsLoading(false)
-				}
-			},
-			(error) => setIsError(error.message))
+  useEffect(() => {
+    getData(db, collectionName)
+  }, [db, collectionName])
 
-			return () =>{
-				getCollections()
-			}
-		})()
-	}, [collectionPath, db])
-
-	return {isLoading, isError, data}
+  return [data, error, isLoading]
 }
 
-export default useCollections
+export default useCollection

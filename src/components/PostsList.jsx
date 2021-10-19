@@ -1,29 +1,14 @@
 import db from '../services/firebase'
-import { collection, getDocs } from 'firebase/firestore'
-import { useEffect, useState } from 'react'
 import postDate from '../utils/postDate'
-import sortDate from '../utils/sortDate'
+import useCollections from '../hooks/useCollections'
 import './styles/PostsList.css'
 
 const PostsList = () => {
-  const [getPosts, setGetPosts] = useState([])
+  const [data, error, isLoading] = useCollections(db,'posts')
 
-  useEffect(() => {
-    const fetchData = async () =>{
-		const postsArray = []
-		const postsCollection = collection(db, 'posts')
-		const documents = await getDocs(postsCollection)
-		documents.forEach(document =>{
-			let date = new Date(document.data().date.toDate())
-			postsArray.push({...document.data(), id: document.id, date})
-		})
-		const sortedArray = sortDate(postsArray)
-      	setGetPosts(sortedArray)
-	}
-	fetchData()
-  }, [])
+  if(isLoading) return <h1>Loading...</h1>
 
-  const postsDB = getPosts.map((post) => {
+  const postsDB = data.map((post) => {
     return (
       <div className = 'Post-Container' key = {post.id}>
         <div className = 'Post-profilepic'>
@@ -45,7 +30,7 @@ const PostsList = () => {
 
   return (
     <div className = 'PostsList wrapper'>
-      {postsDB}
+      {error ? <h1>{error}</h1> : postsDB}
     </div>
   )
 }
