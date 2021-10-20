@@ -1,16 +1,16 @@
 .App {
-	background-color: #2E132C;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
+  background-color: #2e132c;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .App > img {
-	height: 40rem;
-	width: 40rem;
+  height: 40rem;
+  width: 40rem;
 }
 
 .App > h3 {
-	color: white;
-	font-size: 2rem;
+  color: white;
+  font-size: 2rem;
 }

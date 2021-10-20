@@ -17,7 +17,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch:sass": "sass src/styles/main.scss src/styles/main.css -w",
+    "compile:sass": "sass src/styles/main.scss src/styles/main.css",
+    "compress:sass": "sass src/styles/main.css src/styles/styles.min.css --style compressed"
   },
   "eslintConfig": {
     "extends": [
@@ -32,9 +35,12 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 3 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.43.2"
   }
 }
