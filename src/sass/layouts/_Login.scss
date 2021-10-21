@@ -1,0 +1,12 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 90vh;
+
+  &--logo {
+    width: 25rem;
+    height: 25rem;
+  }
+}

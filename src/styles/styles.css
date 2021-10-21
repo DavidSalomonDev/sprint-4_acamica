@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Press+Start+2P&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+html {
+  color: #f1f1f1;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #2e132c;
+  font-family: "Fira code", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Press Start 2P", cursive;
+  text-transform: uppercase;
+}
+
+.Navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  height: 7vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.Navbar__item {
+  list-style: none;
+}
+.Navbar__item__logo {
+  height: 1.5rem;
+}
+.Navbar__item__logo.logo--image {
+  height: 2.5rem;
+}
+.Navbar__item__profile {
+  border: 3px solid #f50d5a;
+  border-radius: 50%;
+  height: 3.5rem;
+  width: 3.5rem;
+  overflow: hidden;
+}
+.Navbar__item__profile--pic {
+  object-fit: cover;
+  object-position: -1rem 0;
+  width: 3rem;
+  height: 3rem;
+}
+
+.App {
+  background-color: #2e132c;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 90vh;
+}
+.Login--logo {
+  width: 25rem;
+  height: 25rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

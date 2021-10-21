@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { collection, addDoc } from 'firebase/firestore/lite'
-import db  from '../services/firebase'
+import db from '../services/firebase'
 import './styles/NewPost.css'
 
 const NewPost = () => {

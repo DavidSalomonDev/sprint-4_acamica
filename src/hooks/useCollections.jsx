@@ -20,7 +20,7 @@ const useCollection = (db, collectionName) => {
       const sortedArray = sortDate(dataArray)
       setData(sortedArray)
     } catch (error) {
-      console.error('Error from collection', error)
+      console.error('Error from collection:', error)
       setError(error.message)
     }
     setIsLoading(false)
