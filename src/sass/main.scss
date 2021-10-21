@@ -7,8 +7,13 @@
 @import 'base/typography';
 @import 'base/utilities';
 
-@import "components/Navbar";
+@import "components/button";
+@import "components/progressbar";
 
-@import "layouts/App";
-@import "layouts/Home";
-@import "layouts/Login";
+@import "layouts/Navbar";
+@import "layouts/NewPost";
+
+@import "pages/App";
+@import "pages/Feed";
+@import "pages/Home";
+@import "pages/Login";

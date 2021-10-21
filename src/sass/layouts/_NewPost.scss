@@ -1,0 +1,81 @@
+.NewPost {
+  align-items: center;
+  background-color: $color-primary-dark;
+  border-bottom: 3px #60265B solid;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  margin: 0 auto;
+
+  &__picture {
+    align-self: flex-start;
+    border-radius: 50%;
+    border: 3px solid $color-tertiary;
+    height: 5.5rem;
+    margin: 0 1rem;
+    overflow: hidden;
+    width: 5.5rem;
+
+    &--image {
+      object-fit: cover;
+      object-position: -1.6rem 0;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 1.5rem;
+    max-width: 50rem;
+
+
+    &--input {
+      background-color: $color-primary;
+      border: none;
+      color: #FFF;
+      font-size: 1.6rem;
+      height: 15rem;
+      padding: 1rem;
+      resize: none;
+      width: 100%;
+
+      &::placeholder {
+        color: $color-primary-light;
+        font-family: inherit;
+        font-size: 1.8rem;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--button {
+      align-self: end;
+      background-color: $color-primary;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+
+  }
+
+  &__stats {
+    align-items: center;
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+    & > .stats--max {
+      color: #F50D5A;
+
+    }
+  }
+
+}

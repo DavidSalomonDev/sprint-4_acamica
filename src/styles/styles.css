@@ -40,17 +40,41 @@ h6 {
   text-transform: uppercase;
 }
 
+::selection {
+  background-color: #f1f1f1;
+  color: #2e132c;
+}
+
+.button {
+  border: none;
+  color: #150714;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  height: 3.5rem;
+  text-transform: uppercase;
+  width: 10rem;
+}
+
+.progressbar {
+  background-color: #00DA76;
+  height: 0.5rem;
+}
+
 .Navbar {
   align-items: center;
   display: flex;
-  justify-content: space-around;
-  height: 7vh;
+  height: 6rem;
   width: 100%;
+  padding: 0 2rem;
   position: fixed;
   top: 0;
+  z-index: 1000;
+  background-color: #2e132c;
 }
 .Navbar__item {
   list-style: none;
+  margin: 0 1rem;
 }
 .Navbar__item__logo {
   height: 1.5rem;
@@ -72,6 +96,74 @@ h6 {
   height: 3rem;
 }
 
+.NewPost {
+  align-items: center;
+  background-color: #150714;
+  border-bottom: 3px #60265B solid;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+.NewPost__picture {
+  align-self: flex-start;
+  border-radius: 50%;
+  border: 3px solid #f50d5a;
+  height: 5.5rem;
+  margin: 0 1rem;
+  overflow: hidden;
+  width: 5.5rem;
+}
+.NewPost__picture--image {
+  object-fit: cover;
+  object-position: -1.6rem 0;
+  width: 5rem;
+  height: 5rem;
+}
+.NewPost__form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 1.5rem;
+  max-width: 50rem;
+}
+.NewPost__form--input {
+  background-color: #2e132c;
+  border: none;
+  color: #FFF;
+  font-size: 1.6rem;
+  height: 15rem;
+  padding: 1rem;
+  resize: none;
+  width: 100%;
+}
+.NewPost__form--input::placeholder {
+  color: #60265b;
+  font-family: inherit;
+  font-size: 1.8rem;
+}
+.NewPost__form--input:focus {
+  outline: none;
+}
+.NewPost__form--button {
+  align-self: end;
+  background-color: #2e132c;
+}
+.NewPost__form--button:hover {
+  color: #f1f1f1;
+}
+.NewPost__stats {
+  align-items: center;
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.NewPost__stats > .stats--max {
+  color: #F50D5A;
+}
+
 .App {
   background-color: #2e132c;
   display: flex;
@@ -79,10 +171,18 @@ h6 {
   width: 100%;
 }
 
+.Feed {
+  display: flex;
+  margin-top: 6rem;
+  width: 100%;
+  justify-content: center;
+}
+
 .Home {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .Login {

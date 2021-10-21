@@ -14,3 +14,8 @@ h6 {
   font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
 }
+
+::selection {
+  background-color: $color-white;
+  color: $color-primary;
+}

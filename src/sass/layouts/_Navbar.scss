@@ -1,14 +1,17 @@
 .Navbar {
   align-items: center;
   display: flex;
-  justify-content: space-around;
-  height: 7vh;
+  height: 6rem;
   width: 100%;
+  padding: 0 2rem;
   position: fixed;
   top: 0;
+  z-index: 1000;
+  background-color: $color-primary;
 
   &__item {
     list-style: none;
+    margin: 0 1rem;
 
     &__logo {
       height: 1.5rem;
@@ -24,7 +27,7 @@
       height: 3.5rem;
       width: 3.5rem;
       overflow: hidden;
-      
+
       &--pic {
         object-fit: cover;
         object-position: -1rem 0;
