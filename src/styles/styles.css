@@ -10,12 +10,12 @@
 }
 
 html {
-  color: #f1f1f1;
+  color: #F1F1F1;
   font-size: 62.5%;
 }
 
 body {
-  background-color: #2e132c;
+  background-color: #2E132C;
   font-family: "Fira code", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,8 +41,8 @@ h6 {
 }
 
 ::selection {
-  background-color: #f1f1f1;
-  color: #2e132c;
+  background-color: #F1F1F1;
+  color: #2E132C;
 }
 
 .button {
@@ -56,6 +56,69 @@ h6 {
   width: 10rem;
 }
 
+.LikeBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.LikeBtn .MuiSvgIcon-root {
+  color: #F50D5A;
+  font-size: 2rem;
+}
+
+.Post {
+  align-items: center;
+  border-bottom: 3px solid #60265B;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+.Post__profilePic {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-width: 20%;
+  overflow: hidden;
+}
+.Post__profilePic--image {
+  border-radius: 50%;
+  height: 5rem;
+  object-fit: cover;
+  width: 5rem;
+}
+.Post__info {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  text-align: left;
+  width: 80%;
+}
+.Post__info--data {
+  margin-bottom: 1rem;
+}
+.Post__info--username {
+  background-color: yellow;
+  border-radius: 0.3rem;
+  color: #2E132C;
+  font-family: "Press Start 2P", cursive;
+  padding-block: 0.5rem;
+}
+.Post__info--date {
+  padding: 1rem;
+}
+.Post__info--likes {
+  align-items: center;
+  color: #F50D5A;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 .progressbar {
   background-color: #00DA76;
   height: 0.5rem;
@@ -63,14 +126,16 @@ h6 {
 
 .Navbar {
   align-items: center;
+  background-color: #2E132C;
   display: flex;
   height: 6rem;
-  width: 100%;
+  justify-content: space-around;
+  max-width: 100rem;
   padding: 0 2rem;
   position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
-  background-color: #2e132c;
 }
 .Navbar__item {
   list-style: none;
@@ -83,17 +148,17 @@ h6 {
   height: 2.5rem;
 }
 .Navbar__item__profile {
-  border: 3px solid #f50d5a;
+  border: 3px solid #F50D5A;
   border-radius: 50%;
   height: 3.5rem;
-  width: 3.5rem;
   overflow: hidden;
+  width: 3.5rem;
 }
 .Navbar__item__profile--pic {
+  height: 3rem;
   object-fit: cover;
   object-position: -1rem 0;
   width: 3rem;
-  height: 3rem;
 }
 
 .NewPost {
@@ -101,35 +166,36 @@ h6 {
   background-color: #150714;
   border-bottom: 3px #60265B solid;
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
-  padding: 2rem 0;
+  justify-content: center;
   margin: 0 auto;
+  padding: 2rem 0;
+  width: 100%;
 }
 .NewPost__picture {
   align-self: flex-start;
+  border: 3px solid #F50D5A;
   border-radius: 50%;
-  border: 3px solid #f50d5a;
   height: 5.5rem;
-  margin: 0 1rem;
+  margin: 0 1rem 1.5rem 1.5rem;
   overflow: hidden;
   width: 5.5rem;
 }
 .NewPost__picture--image {
+  height: 5rem;
   object-fit: cover;
   object-position: -1.6rem 0;
   width: 5rem;
-  height: 5rem;
 }
 .NewPost__form {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 0 1.5rem;
   max-width: 50rem;
+  padding: 0 1.5rem;
 }
 .NewPost__form--input {
-  background-color: #2e132c;
+  background-color: #2E132C;
   border: none;
   color: #FFF;
   font-size: 1.6rem;
@@ -139,7 +205,7 @@ h6 {
   width: 100%;
 }
 .NewPost__form--input::placeholder {
-  color: #60265b;
+  color: #60265B;
   font-family: inherit;
   font-size: 1.8rem;
 }
@@ -148,10 +214,10 @@ h6 {
 }
 .NewPost__form--button {
   align-self: end;
-  background-color: #2e132c;
+  background-color: #2E132C;
 }
 .NewPost__form--button:hover {
-  color: #f1f1f1;
+  color: #F1F1F1;
 }
 .NewPost__stats {
   align-items: center;
@@ -164,8 +230,19 @@ h6 {
   color: #F50D5A;
 }
 
+.PostsList {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100rem;
+  overflow-y: scroll;
+  width: 100%;
+}
+
 .App {
-  background-color: #2e132c;
+  background-color: #2E132C;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -173,28 +250,29 @@ h6 {
 
 .Feed {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 6rem;
   width: 100%;
-  justify-content: center;
 }
 
 .Home {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
 .Login {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
   height: 90vh;
+  justify-content: center;
 }
 .Login--logo {
-  width: 25rem;
   height: 25rem;
+  width: 25rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

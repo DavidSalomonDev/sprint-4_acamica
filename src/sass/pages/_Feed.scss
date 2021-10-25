@@ -1,6 +1,7 @@
 .Feed {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 6rem;
   width: 100%;
-  justify-content: center;
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { collection, addDoc } from 'firebase/firestore/lite'
+import { collection, addDoc } from 'firebase/firestore'
 import db from '../services/firebase'
 
 const NewPost = () => {
@@ -18,8 +18,9 @@ const NewPost = () => {
     addDoc(postsCollection, {
       content: newPost,
       date: new Date(),
-      username: 'test',
+      isLiked: false,
       likes: 0,
+      username: 'test',
     })
     setCharCounter(0)
     setNewPost('')

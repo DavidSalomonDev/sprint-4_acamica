@@ -11,7 +11,7 @@ const useCollection = (db, collectionName) => {
     setIsLoading(true)
     try {
       const dataArray = []
-      const collectionDocs = collection(db, collectionName)
+      const collectionDocs = await collection(db, collectionName)
       const documents = await getDocs(collectionDocs)
       documents.forEach((document) => {
         let date = new Date(document.data().date.toDate())

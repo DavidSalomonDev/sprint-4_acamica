@@ -7,13 +7,16 @@
 @import 'base/typography';
 @import 'base/utilities';
 
-@import "components/button";
-@import "components/progressbar";
+@import 'components/button';
+@import 'components/LikeBtn';
+@import 'components/Post';
+@import 'components/progressbar';
 
-@import "layouts/Navbar";
-@import "layouts/NewPost";
+@import 'layouts/Navbar';
+@import 'layouts/NewPost';
+@import 'layouts/Postslist';
 
-@import "pages/App";
-@import "pages/Feed";
-@import "pages/Home";
-@import "pages/Login";
+@import 'pages/App';
+@import 'pages/Feed';
+@import 'pages/Home';
+@import 'pages/Login';

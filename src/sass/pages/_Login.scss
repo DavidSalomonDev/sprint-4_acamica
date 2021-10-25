@@ -1,12 +1,12 @@
 .Login {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
   height: 90vh;
+  justify-content: center;
 
   &--logo {
-    width: 25rem;
-    height: 25rem;
+	height: 25rem;
+	width: 25rem;
   }
 }
