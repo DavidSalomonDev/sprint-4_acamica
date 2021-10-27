@@ -10,12 +10,12 @@
 }
 
 html {
-  color: #F1F1F1;
+  color: #f1f1f1;
   font-size: 62.5%;
 }
 
 body {
-  background-color: #2E132C;
+  background-color: #2e132c;
   font-family: "Fira code", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,8 +26,8 @@ code {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
+  font-family: "Fira Code", sans-serif;
+  font-size: 1.4rem;
 }
 
 h1,
@@ -41,8 +41,8 @@ h6 {
 }
 
 ::selection {
-  background-color: #F1F1F1;
-  color: #2E132C;
+  background-color: #f1f1f1;
+  color: #2e132c;
 }
 
 .button {
@@ -69,13 +69,14 @@ h6 {
 
 .Post {
   align-items: center;
-  border-bottom: 3px solid #60265B;
+  border-bottom: 3px solid #60265b;
   display: flex;
   justify-content: center;
   padding: 2rem 0;
   width: 100%;
 }
 .Post__profilePic {
+  align-self: flex-start;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -94,25 +95,35 @@ h6 {
   flex-direction: column;
   font-size: 1.5rem;
   margin-left: 1rem;
+  margin-right: 1rem;
   text-align: left;
   width: 80%;
 }
 .Post__info--data {
   margin-bottom: 1rem;
+  width: 100%;
 }
 .Post__info--username {
   background-color: yellow;
   border-radius: 0.3rem;
-  color: #2E132C;
+  color: #2e132c;
   font-family: "Press Start 2P", cursive;
   padding-block: 0.5rem;
 }
 .Post__info--date {
   padding: 1rem;
 }
+.Post__info--deleteBtn {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: #f1f1f1;
+  transform: scale(1.4);
+}
 .Post__info--likes {
   align-items: center;
-  color: #F50D5A;
+  color: #f50d5a;
   display: flex;
   font-size: 1.8rem;
   justify-content: center;
@@ -126,7 +137,7 @@ h6 {
 
 .Navbar {
   align-items: center;
-  background-color: #2E132C;
+  background-color: #2e132c;
   display: flex;
   height: 6rem;
   justify-content: space-around;
@@ -148,7 +159,7 @@ h6 {
   height: 2.5rem;
 }
 .Navbar__item__profile {
-  border: 3px solid #F50D5A;
+  border: 3px solid #f50d5a;
   border-radius: 50%;
   height: 3.5rem;
   overflow: hidden;
@@ -174,7 +185,7 @@ h6 {
 }
 .NewPost__picture {
   align-self: flex-start;
-  border: 3px solid #F50D5A;
+  border: 3px solid #f50d5a;
   border-radius: 50%;
   height: 5.5rem;
   margin: 0 1rem 1.5rem 1.5rem;
@@ -195,7 +206,7 @@ h6 {
   padding: 0 1.5rem;
 }
 .NewPost__form--input {
-  background-color: #2E132C;
+  background-color: #2e132c;
   border: none;
   color: #FFF;
   font-size: 1.6rem;
@@ -205,7 +216,7 @@ h6 {
   width: 100%;
 }
 .NewPost__form--input::placeholder {
-  color: #60265B;
+  color: #60265b;
   font-family: inherit;
   font-size: 1.8rem;
 }
@@ -214,10 +225,10 @@ h6 {
 }
 .NewPost__form--button {
   align-self: end;
-  background-color: #2E132C;
+  background-color: #2e132c;
 }
 .NewPost__form--button:hover {
-  color: #F1F1F1;
+  color: #f1f1f1;
 }
 .NewPost__stats {
   align-items: center;
@@ -236,13 +247,13 @@ h6 {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  max-width: 100rem;
+  max-width: 65rem;
   overflow-y: scroll;
   width: 100%;
 }
 
 .App {
-  background-color: #2E132C;
+  background-color: #2e132c;
   display: flex;
   flex-direction: column;
   width: 100%;

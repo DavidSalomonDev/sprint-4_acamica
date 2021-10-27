@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Press+Start+2P&display=swap');
 
 p {
-  font-family: 'Roboto', sans-serif;
-  font-size: $default-font-size;
+	font-family: 'Fira Code', sans-serif;
+	font-size: $default-font-size;
 }
 
 h1,
@@ -11,11 +11,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Press Start 2P', cursive;
-  text-transform: uppercase;
+	font-family: 'Press Start 2P', cursive;
+	text-transform: uppercase;
 }
 
 ::selection {
-  background-color: $color-white;
-  color: $color-primary;
+	background-color: $color-white;
+	color: $color-primary;
 }
