@@ -7,7 +7,7 @@ const useCollection = (db, collectionName) => {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
-	/*
+  /*
   const getData = async (db, collectionName) => {
     setIsLoading(true)
     try {
@@ -30,23 +30,22 @@ const useCollection = (db, collectionName) => {
 
   const getData = (db, collectionName) => {
     setIsLoading(true)
-	const collectionDocs = collection(db, collectionName)
+    const collectionDocs = collection(db, collectionName)
 
-	const unsub = onSnapshot(collectionDocs, snapshot => {
-		const dataArray = []
-		snapshot.forEach((document) => {
-			let date = document.data().date ? new Date(document.data().date.toDate()) : ''
-			dataArray.push({ ...document.data(), id: document.id, date })
-		})
-		const sortedArray = sortDate(dataArray)
-    	setData(sortedArray)
-    },error => {
-		console.error('Error from collection: ', error )
-		setError(error.code, error.message)
-	}) 
-		setIsLoading(false)
-		setTimeout(()=> unsub(),50000)
-	}
+    const unsub = onSnapshot(collectionDocs, snapshot => {
+      const dataArray = []
+      snapshot.forEach((document) => {
+        let date = document.data().date ? new Date(document.data().date.toDate()) : ''
+        dataArray.push({ ...document.data(), id: document.id, date })
+      })
+      const sortedArray = sortDate(dataArray)
+      setData(sortedArray)
+    }, error => {
+      setError(error.message)
+    })
+    setIsLoading(false)
+    setTimeout(() => unsub(), 50000)
+  }
 
   useEffect(() => {
     getData(db, collectionName)

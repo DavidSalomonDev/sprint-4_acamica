@@ -1,6 +1,6 @@
 import LikeBtn from 'components/LikeBtn'
 import postDate from 'utils/postDate'
-import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
 
 const Post = (props) => {
   const { id, content, date, isLiked, likes, username } = props
@@ -15,7 +15,7 @@ const Post = (props) => {
       <div className = 'Post__info'>
         <div className = 'Post__info--data'>
           <span className = 'Post__info--username'>{username}</span> - <span className = 'Post__info--date'>{postDate(date)}</span>
-		  <button className='Post__info--deleteBtn'><DeleteOutlineIcon /></button>
+          <button className = 'Post__info--deleteBtn'><DeleteOutlineIcon /></button>
         </div>
         <p className = 'Post__info--content'>{content}</p>
         <div className = 'Post__info--likes'>
