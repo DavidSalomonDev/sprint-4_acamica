@@ -10,11 +10,7 @@ const PostsList = () => {
   const postsDB = data.map((post) => {
     return (
       <Post key = {post.id}
-            id = {post.id}
-            content = {post.content}
-            date = {post.date}
-            likes = {post.likes}
-            username = {post.username} />
+            {...post} />
     )
   })
 

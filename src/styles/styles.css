@@ -252,6 +252,9 @@ h6 {
   overflow-y: scroll;
   width: 100%;
 }
+.PostsList::-webkit-scrollbar {
+  display: none;
+}
 
 .App {
   background-color: #2E132C;
