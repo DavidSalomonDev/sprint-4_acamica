@@ -1,6 +1,6 @@
 import { collection, getDocs } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
-import sortDate from '../utils/sortDate'
+import sortDate from 'utils/sortDate'
 
 const useCollection = (db, collectionName) => {
   const [data, setData] = useState([])

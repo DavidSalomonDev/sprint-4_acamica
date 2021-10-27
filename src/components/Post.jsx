@@ -1,5 +1,5 @@
-import LikeBtn from '../components/LikeBtn'
-import postDate from '../utils/postDate'
+import LikeBtn from 'components/LikeBtn'
+import postDate from 'utils/postDate'
 
 const Post = (props) => {
   const { id, content, date, isLiked, likes, username } = props

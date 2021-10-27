@@ -1,8 +1,8 @@
-import db from '../services/firebase'
-import useCollections from '../hooks/useCollections'
+import db from 'services/firebase'
+import useCollections from 'hooks/useCollections'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Loader from 'react-loader-spinner'
-import Post from '../components/Post'
+import Post from 'components/Post'
 
 const PostsList = () => {
   const [data, error, isLoading] = useCollections(db, 'posts')

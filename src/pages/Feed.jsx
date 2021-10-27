@@ -1,5 +1,5 @@
-import NewPost from '../components/NewPost'
-import PostsList from '../containers/PostsList'
+import NewPost from 'components/NewPost'
+import PostsList from 'containers/PostsList'
 
 const Feed = () => {
   return (

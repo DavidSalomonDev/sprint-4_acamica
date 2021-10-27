@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { collection, addDoc } from 'firebase/firestore'
-import db from '../services/firebase'
+import db from 'services/firebase'
 
 const NewPost = () => {
   const [charCounter, setCharCounter] = useState(0)

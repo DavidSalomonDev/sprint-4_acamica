@@ -1,6 +1,6 @@
 import { Route } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import Feed from '../pages/Feed'
+import Navbar from 'components/Navbar'
+import Feed from 'pages/Feed'
 
 const Home = () => {
   return (
