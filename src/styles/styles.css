@@ -120,6 +120,7 @@ h6 {
   border: none;
   color: #f1f1f1;
   transform: scale(1.4);
+  cursor: pointer;
 }
 .Post__info--likes {
   align-items: center;

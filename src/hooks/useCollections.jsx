@@ -14,7 +14,7 @@ const useCollection = (db, collectionName) => {
       const collectionDocs = await collection(db, collectionName)
       const documents = await getDocs(collectionDocs)
       documents.forEach((document) => {
-        let date = new Date(document.data().date.toDate())
+        let date = document.data().date ? new Date(document.data().date.toDate()) : ''
         dataArray.push({ ...document.data(), id: document.id, date })
       })
       const sortedArray = sortDate(dataArray)
