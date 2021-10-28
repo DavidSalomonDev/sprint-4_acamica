@@ -15,13 +15,17 @@ const NewPost = () => {
     e.preventDefault()
     if (newPost.length < 1) return
     const postsCollection = collection(db, 'posts')
-    addDoc(postsCollection, {
+    const newDoc = {
       content: newPost,
       date: new Date(),
       isLiked: false,
       likes: 0,
-      username: 'test',
-    })
+      author: {
+        uid: '777',
+        username: 'test',
+      },
+    }
+    addDoc(postsCollection, newDoc)
     setCharCounter(0)
     setNewPost('')
   }
