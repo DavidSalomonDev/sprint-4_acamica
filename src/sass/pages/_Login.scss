@@ -1,6 +1,7 @@
 .Login {
   align-items: center;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   height: 90vh;
   justify-content: center;
@@ -8,5 +9,9 @@
   &--logo {
 	height: 25rem;
 	width: 25rem;
+  }
+
+  &__button {
+	margin: 2rem;
   }
 }

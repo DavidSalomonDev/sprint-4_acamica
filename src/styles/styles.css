@@ -281,6 +281,7 @@ h6 {
 .Login {
   align-items: center;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   height: 90vh;
   justify-content: center;
@@ -288,6 +289,9 @@ h6 {
 .Login--logo {
   height: 25rem;
   width: 25rem;
+}
+.Login__button {
+  margin: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
