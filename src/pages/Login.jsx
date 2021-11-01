@@ -1,4 +1,9 @@
-const Login = ({ setIsLogged }) => {
+import { UserContext } from "context/User"
+import { useContext } from "react"
+
+const Login = () => {
+
+  const { setIsLogged } = useContext(UserContext)
 
   const handleLogin = () => {
     setIsLogged(true)

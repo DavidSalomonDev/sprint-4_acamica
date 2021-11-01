@@ -6,12 +6,12 @@ import { BrowserRouter } from 'react-router-dom'
 
 const App = () => {
 
-  const { isLogged, setIsLogged } = useContext(UserContext)
+  const { isLogged } = useContext(UserContext)
 
   return (
     <BrowserRouter>
       <div className = 'App'>
-        {isLogged ? <Home /> : <Login setIsLogged = {setIsLogged} />
+        {isLogged ? <Home /> : <Login />
         }
 
       </div>

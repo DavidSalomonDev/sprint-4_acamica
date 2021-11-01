@@ -19,7 +19,7 @@ const NewPost = () => {
       content: newPost,
       date: new Date(),
       isLiked: false,
-      likes: 0,
+      likes: [],
       author: {
         uid: '777',
         username: 'test',

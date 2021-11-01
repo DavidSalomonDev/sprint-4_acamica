@@ -3,7 +3,7 @@ import postDate from 'utils/postDate'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
 
 const Post = (props) => {
-  const { id, content, date, isLiked, likes, author } = props
+  const { id, content, date, likes, author } = props
 
   return (
     <div className = 'Post' key = {id}>
@@ -19,7 +19,7 @@ const Post = (props) => {
         </div>
         <p className = 'Post__info--content'>{content}</p>
         <div className = 'Post__info--likes'>
-          <LikeBtn isLiked = {isLiked} />{likes}
+          <LikeBtn />{likes.length}
         </div>
       </div>
 
