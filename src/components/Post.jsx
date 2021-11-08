@@ -8,8 +8,8 @@ const Post = (props) => {
   return (
     <div className = 'Post' key = {id}>
       <div className = 'Post__profilePic'>
-        <img src = 'https://www.teahub.io/photos/full/364-3646944_cool-profile-pictures-hd-pic-hwb37635-cat-with.jpg'
-             alt = 'Cat profile pic'
+        <img src = {author.photoURL}
+             alt = {author.displayName}
              className = 'Post__profilePic--image' />
       </div>
       <div className = 'Post__info'>
@@ -19,7 +19,7 @@ const Post = (props) => {
         </div>
         <p className = 'Post__info--content'>{content}</p>
         <div className = 'Post__info--likes'>
-          <LikeBtn isLiked = {isLiked} />{likes}
+          <LikeBtn isLiked = {isLiked} />{likes.length}
         </div>
       </div>
 

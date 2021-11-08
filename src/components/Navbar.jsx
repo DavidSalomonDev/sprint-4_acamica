@@ -1,13 +1,18 @@
+import { UserContext } from 'context/User'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+
+  const { user } = useContext(UserContext)
+
   return (
     <nav className = 'Navbar'>
       <li className = 'Navbar__item'>
         <div className = 'Navbar__item__profile'>
           <img className = 'Navbar__item__profile--pic'
-               src = 'https://www.teahub.io/photos/full/364-3646944_cool-profile-pictures-hd-pic-hwb37635-cat-with.jpg'
-               alt = 'Cat Profile pic' />
+               src = {user.photoURL}
+               alt = {user.displayName} />
         </div>
 
 

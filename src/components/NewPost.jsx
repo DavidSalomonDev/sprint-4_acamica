@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { UserContext } from 'context/User'
+import { useContext, useState } from 'react'
 import { collection, addDoc } from 'firebase/firestore'
 import db from 'services/firebase'
 
 const NewPost = () => {
+
+  const { user } = useContext(UserContext)
+
   const [charCounter, setCharCounter] = useState(0)
   const [newPost, setNewPost] = useState('')
 
@@ -18,10 +22,12 @@ const NewPost = () => {
     const newDoc = {
       content: newPost,
       date: new Date(),
-      isLiked: false,
-      likes: 0,
+      likes: [],
       author: {
-        uid: '777',
+        displayName: user.displayName,
+        color: 'yellow',
+        photoURL: user.photoURL,
+        uid: user.uid,
         username: 'test',
       },
     }
@@ -34,8 +40,8 @@ const NewPost = () => {
     <section className = 'NewPost'>
       <div className = 'NewPost__picture'>
         <img className = 'NewPost__picture--image'
-             src = 'https://www.teahub.io/photos/full/364-3646944_cool-profile-pictures-hd-pic-hwb37635-cat-with.jpg'
-             alt = 'Cat Profile pic' />
+             src = {user.photoURL}
+             alt = {user.displayName} />
       </div>
       <form className = 'NewPost__form' onSubmit = {handleSubmit}>
 					<textarea
