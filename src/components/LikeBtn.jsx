@@ -2,9 +2,9 @@ import { useState } from 'react'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 
-const LikeBtn = ({ isLiked }) => {
+const LikeBtn = () => {
 
-  const [like, setLike] = useState(isLiked)
+  const [like, setLike] = useState(false)
 
   const handleLike = () => {
     setLike(!like)
