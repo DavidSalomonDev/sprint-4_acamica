@@ -10,10 +10,8 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className = 'App'>
-        {user.uid ? <Home /> : <Login />
-        }
-
+      <div className='App'>
+        {user.uid ? <Home /> : <Login />}
       </div>
     </BrowserRouter>
   )

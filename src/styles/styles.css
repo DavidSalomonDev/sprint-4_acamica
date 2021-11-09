@@ -56,6 +56,56 @@ h6 {
   width: 10rem;
 }
 
+.g-sign-in-button {
+  margin: 1rem;
+  display: inline-block;
+  width: 24rem;
+  height: 5rem;
+  background-color: #4285f4;
+  color: #fff;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+}
+.g-sign-in-button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+  box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+}
+.g-sign-in-button::active {
+  background-color: #3367D6;
+  transition: background-color 0.2s;
+}
+.g-sign-in-button .logo-wrapper {
+  padding: 1.5rem;
+  background: #fff;
+  width: 4.8rem;
+  height: 100%;
+  border-radius: 1px;
+  display: inline-block;
+}
+.g-sign-in-button .text-container {
+  font-family: Roboto, arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.21px;
+  font-size: 1.6rem;
+  line-height: 4.8rem;
+  vertical-align: top;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  width: 18rem;
+}
+.g-sign-in-button .content-wrapper {
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+}
+.g-sign-in-button img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
 .LikeBtn {
   background-color: transparent;
   border: none;
@@ -292,6 +342,12 @@ h6 {
 }
 .Login__button {
   margin: 2rem;
+}
+.Login h2 {
+  text-align: center;
+}
+.Login p {
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
