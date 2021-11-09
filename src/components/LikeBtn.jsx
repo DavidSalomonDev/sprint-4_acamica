@@ -8,7 +8,6 @@ import { UserContext } from 'context/User'
 const LikeBtn = ({ id, isLiked }) => {
 
   const { user } = useContext(UserContext)
-  console.log(id)
   const [like, setLike] = useState(isLiked)
 
 
