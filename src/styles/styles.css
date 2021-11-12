@@ -351,4 +351,18 @@ h6 {
   padding: 2rem;
 }
 
+.swal2-container .swal2-title {
+  font-size: 2.1rem;
+  line-height: 1.4;
+}
+.swal2-container .swal2-html-container {
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+.swal2-container .swal2-styled.swal2-confirm,
+.swal2-container .swal2-styled.swal2-cancel {
+  font-family: "Fira Code", sans-serif;
+  font-size: 1.3rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
