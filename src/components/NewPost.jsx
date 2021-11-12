@@ -1,7 +1,7 @@
 import { UserContext } from 'context/User'
 import { useContext, useState } from 'react'
 import { collection, addDoc } from 'firebase/firestore'
-import db from 'services/firebase'
+import db from 'services/firebase.config'
 
 const NewPost = () => {
 
@@ -37,26 +37,26 @@ const NewPost = () => {
   }
 
   return (
-    <section className = 'NewPost'>
-      <div className = 'NewPost__picture'>
-        <img className = 'NewPost__picture--image'
-             src = {user.photoURL}
-             alt = {user.displayName} />
+    <section className='NewPost'>
+      <div className='NewPost__picture'>
+        <img className='NewPost__picture--image'
+          src={user.photoURL}
+          alt={user.displayName} />
       </div>
-      <form className = 'NewPost__form' onSubmit = {handleSubmit}>
-					<textarea
-            onChange = {handleInput}
-            maxLength = '200'
-            className = 'NewPost__form--input'
-            value = {newPost}
-            placeholder = "What's happening?" />
-        <div className = 'progressbar'
-             style = {{ width: charCounter / 2 + '%' }}></div>
-        <div className = 'NewPost__stats'>
-          <span className = 'stats--counter'>{charCounter}</span>
-          <span className = 'stats--max'>200 max.</span>
+      <form className='NewPost__form' onSubmit={handleSubmit}>
+        <textarea
+          onChange={handleInput}
+          maxLength='200'
+          className='NewPost__form--input'
+          value={newPost}
+          placeholder="What's happening?" />
+        <div className='progressbar'
+          style={{ width: charCounter / 2 + '%' }}></div>
+        <div className='NewPost__stats'>
+          <span className='stats--counter'>{charCounter}</span>
+          <span className='stats--max'>200 max.</span>
         </div>
-        <button className = 'NewPost__form--button button'>Post</button>
+        <button className='NewPost__form--button button'>Post</button>
       </form>
     </section>
 

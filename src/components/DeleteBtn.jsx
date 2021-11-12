@@ -1,7 +1,7 @@
 import { deleteDoc, doc } from '@firebase/firestore'
 import Swal from 'sweetalert2'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
-import db from 'services/firebase'
+import db from 'services/firebase.config'
 
 
 const DeleteBtn = ({ id }) => {

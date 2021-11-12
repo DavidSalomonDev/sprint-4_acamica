@@ -11,7 +11,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className='App'>
-        {user.uid ? <Home /> : <Login />}
+        {!user.uid ? <Login /> : <Home />}
       </div>
     </BrowserRouter>
   )

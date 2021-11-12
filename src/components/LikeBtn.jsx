@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import { updateDoc, doc, arrayUnion, arrayRemove } from '@firebase/firestore'
-import db from 'services/firebase'
+import db from 'services/firebase.config'
 import { UserContext } from 'context/User'
 
 const LikeBtn = ({ id, isLiked }) => {

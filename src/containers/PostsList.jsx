@@ -1,4 +1,4 @@
-import db from 'services/firebase'
+import db from 'services/firebase.config'
 import useCollections from 'hooks/useCollections'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Loader from 'react-loader-spinner'
@@ -9,14 +9,14 @@ const PostsList = () => {
 
   const postsDB = data.map((post) => {
     return (
-      <Post key = {post.id}
-            {...post} />
+      <Post key={post.id}
+        {...post} />
     )
   })
 
   return (
-    <div className = 'PostsList'>
-      {isLoading && <Loader type = 'ThreeDots' color = '#FFF' height = {80} width = {80} />}
+    <div className='PostsList'>
+      {isLoading && <Loader type='ThreeDots' color='#FFF' height={80} width={80} />}
       {error ? <h1>{error}</h1> : postsDB}
     </div>
   )
