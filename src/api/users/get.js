@@ -1,7 +1,7 @@
-import firestore from "./firebase.config";
 import { collection, getDocs, addDoc, where, query } from "firebase/firestore";
+import db from "services/firebase.config";
 
-const usersCollection = collection(firestore, "users");
+const usersCollection = collection(db, "users");
 
 export const getUsers = async () => {
     const users = [];
@@ -15,13 +15,13 @@ export const getUsers = async () => {
 export const getusersByUser = async (userId) => {
     const users = [];
 
-    const filteredusersCollection = query(
+    const filteredUsersCollection = query(
         usersCollection,
-        where("usuario.id", "==", userId)
+        where("user.uid", "==", userId)
     );
 
-    const filteredusersSnapshot = await getDocs(filteredusersCollection);
-    filteredusersSnapshot.forEach((user) => {
+    const filteredUsersSnapshot = await getDocs(filteredUsersCollection);
+    filteredUsersSnapshot.forEach((user) => {
         if (user.data().usuario.id === userId) {
             users.push({ ...user.data(), id: user.id });
         }
@@ -29,7 +29,4 @@ export const getusersByUser = async (userId) => {
     return users;
 };
 
-export const adduser = async (user) => {
-    const newuser = await addDoc(usersCollection, user);
-    return newuser;
-};
+
