@@ -14,6 +14,7 @@
 @import 'components/Post';
 @import 'components/progressbar';
 
+@import 'layouts/Footer';
 @import 'layouts/Navbar';
 @import 'layouts/NewPost';
 @import 'layouts/Postslist';
@@ -22,6 +23,6 @@
 @import 'pages/Feed';
 @import 'pages/Home';
 @import 'pages/Login';
-@import 'pages/UserPreferences';
+@import 'pages/Options';
 
 @import 'vendors/sweetalert2';

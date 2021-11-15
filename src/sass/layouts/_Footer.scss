@@ -1,0 +1,15 @@
+.Footer {
+  bottom: 1rem;
+  color: $color-primary-light;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  & p {
+    font-size: 1.2rem;
+
+    & span {
+      color: $color-red;
+    }
+  }
+}

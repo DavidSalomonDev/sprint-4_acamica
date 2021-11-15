@@ -15,13 +15,9 @@
 	margin: 2rem;
   }
 
-  h2{
-    text-align: center;
-  }
-
-  p{
-    padding: 2rem;
-
+  h2, p {
+	line-height: 1.7;
+	padding: 2rem;
+	text-align: center;
   }
 }
-

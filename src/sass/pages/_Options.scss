@@ -1,0 +1,94 @@
+.Options {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+  &--logo {
+	margin: 10rem 0;
+	width: 25rem;
+  }
+
+  &__form {
+	padding: 0 4rem;
+
+  }
+
+  &__username {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+  }
+
+  &__welcome {
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 2rem;
+	font-weight: 900;
+	letter-spacing: .3rem;
+	line-height: 1.5;
+	margin-bottom: 1rem;
+	text-align: left;
+	text-transform: uppercase;
+
+	& div {
+	  color: $color-red;
+	  font-weight: 900;
+	}
+  }
+
+  & input {
+	background-color: $color-primary-dark;
+	border: none;
+	color: $color-white;
+	font-family: 'Fira Code', sans-serif;
+	font-size: 1.6rem;
+	padding: 1.5rem;
+
+	&::placeholder {
+	  color: $color-primary-light;
+	  font-size: 1.6rem;
+	}
+
+	&:focus {
+	  outline: none;
+	}
+  }
+
+  &__colors {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+	width: 100%;
+
+	& input {
+	  display: none;
+	}
+
+	&--title {
+	  margin-bottom: 2rem;
+	  width: 100%;
+	}
+  }
+
+  &__squareColor {
+	height: 4rem;
+	margin: 0 .5rem;
+	width: 4rem;
+
+	&:active {
+	  outline: .2rem solid $color-white;
+	}
+  }
+
+  &__submit {
+	background-color: $color-secondary;
+	border: none;
+	color: $color-white;
+	font-family: 'Press Start 2P', sans-serif;
+	padding: 1.5rem 2rem;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+  }
+}

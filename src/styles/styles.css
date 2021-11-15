@@ -187,6 +187,20 @@ h6 {
   height: 0.5rem;
 }
 
+.Footer {
+  bottom: 1rem;
+  color: #60265B;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.Footer p {
+  font-size: 1.2rem;
+}
+.Footer p span {
+  color: #F50D5A;
+}
+
 .Navbar {
   align-items: center;
   background-color: #2E132C;
@@ -344,11 +358,90 @@ h6 {
 .Login__button {
   margin: 2rem;
 }
-.Login h2 {
+.Login h2, .Login p {
+  line-height: 1.7;
+  padding: 2rem;
   text-align: center;
 }
-.Login p {
-  padding: 2rem;
+
+.Options {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+.Options--logo {
+  margin: 10rem 0;
+  width: 25rem;
+}
+.Options__form {
+  padding: 0 4rem;
+}
+.Options__username {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.Options__welcome {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+.Options__welcome div {
+  color: #F50D5A;
+  font-weight: 900;
+}
+.Options input {
+  background-color: #150714;
+  border: none;
+  color: #F1F1F1;
+  font-family: "Fira Code", sans-serif;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+}
+.Options input::placeholder {
+  color: #60265B;
+  font-size: 1.6rem;
+}
+.Options input:focus {
+  outline: none;
+}
+.Options__colors {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.Options__colors input {
+  display: none;
+}
+.Options__colors--title {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.Options__squareColor {
+  height: 4rem;
+  margin: 0 0.5rem;
+  width: 4rem;
+}
+.Options__squareColor:active {
+  outline: 0.2rem solid #F1F1F1;
+}
+.Options__submit {
+  background-color: #00DA76;
+  border: none;
+  color: #F1F1F1;
+  font-family: "Press Start 2P", sans-serif;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .swal2-container .swal2-title {
