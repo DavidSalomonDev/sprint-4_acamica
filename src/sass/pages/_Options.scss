@@ -72,19 +72,19 @@
   }
 
   &__squareColor {
+	cursor: pointer;
 	height: 4rem;
 	margin: 0 .5rem;
 	width: 4rem;
 
-	&:active {
-	  outline: .2rem solid $color-white;
-	}
+
   }
 
   &__submit {
 	background-color: $color-secondary;
 	border: none;
 	color: $color-white;
+	cursor: pointer;
 	font-family: 'Press Start 2P', sans-serif;
 	padding: 1.5rem 2rem;
 	text-align: center;

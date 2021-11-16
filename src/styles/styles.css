@@ -426,17 +426,16 @@ h6 {
   width: 100%;
 }
 .Options__squareColor {
+  cursor: pointer;
   height: 4rem;
   margin: 0 0.5rem;
   width: 4rem;
-}
-.Options__squareColor:active {
-  outline: 0.2rem solid #F1F1F1;
 }
 .Options__submit {
   background-color: #00DA76;
   border: none;
   color: #F1F1F1;
+  cursor: pointer;
   font-family: "Press Start 2P", sans-serif;
   padding: 1.5rem 2rem;
   text-align: center;

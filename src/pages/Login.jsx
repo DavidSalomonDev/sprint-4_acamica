@@ -42,6 +42,7 @@ const Login = () => {
         email: userCredentials.email,
         photoURL: userCredentials.photoURL,
         uid: userCredentials.uid,
+        date: new Date(),
         username: '',
         color: '',
       }
