@@ -1,19 +1,24 @@
-import db from "./services/firebase.config";
+import db from "services/firebase.config";
 import { collection, getDocs, where, query } from "firebase/firestore";
+import sortDate from "utils/sortDate";
 
+const posts = [];
 const postsCollection = collection(db, "posts");
 
-export const getposts = async () => {
-    const posts = [];
+export const getPosts = async () => {
+
     const postsSnapshot = await getDocs(postsCollection);
-    postsSnapshot.forEach((post) => {
-        posts.push({ ...post.data(), id: post.id });
+
+    postsSnapshot.forEach((document) => {
+        let post = document.data()
+        let date = post.date ? post.date.toDate() : ''
+        posts.push({ ...post, id: document.id, date })
     });
-    return posts;
+    const sortedArray = sortDate(posts)
+    return sortedArray;
 };
 
-export const getpostsByUser = async (userId) => {
-    const posts = [];
+export const getPostsByUser = async (userId) => {
     const filteredpostsCollection = query(
         postsCollection,
         where("usuario.id", "==", userId)

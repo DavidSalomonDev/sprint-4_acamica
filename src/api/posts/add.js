@@ -1,4 +1,5 @@
 import { addDoc } from 'firebase/firestore'
+import { collection } from "firebase/firestore";
 import db from 'services/firebase.config';
 
 const postsCollection = collection(db, "posts");

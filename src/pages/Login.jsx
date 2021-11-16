@@ -4,7 +4,6 @@ import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
-  browserSessionPersistence, setPersistence,
 } from 'firebase/auth'
 import { addDoc, collection } from 'firebase/firestore'
 import useCollections from 'hooks/useCollections'

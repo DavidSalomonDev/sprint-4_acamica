@@ -1,3 +1,4 @@
+import 'services/firebase.config'
 import { useContext } from 'react'
 import { UserContext } from 'context/User'
 import Login from 'pages/Login'

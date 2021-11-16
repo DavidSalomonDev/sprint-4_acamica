@@ -1,7 +1,6 @@
 import { UserContext } from 'context/User'
 import { useContext, useState } from 'react'
-import { collection, addDoc } from 'firebase/firestore'
-import db from 'services/firebase.config'
+import { addPost } from 'api/posts/add'
 
 const NewPost = () => {
 
@@ -15,10 +14,9 @@ const NewPost = () => {
     setNewPost(e.target.value)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (newPost.length < 1) return
-    const postsCollection = collection(db, 'posts')
     const newDoc = {
       content: newPost,
       date: new Date(),
@@ -31,7 +29,7 @@ const NewPost = () => {
         username: user.username,
       },
     }
-    addDoc(postsCollection, newDoc)
+    await addPost(newDoc)
     setCharCounter(0)
     setNewPost('')
   }

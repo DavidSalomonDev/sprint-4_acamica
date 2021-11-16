@@ -1,10 +1,10 @@
-import { collection, getDocs, addDoc, where, query } from "firebase/firestore";
+import { collection, getDocs, where, query } from "firebase/firestore";
 import db from "services/firebase.config";
 
+const users = [];
 const usersCollection = collection(db, "users");
 
 export const getUsers = async () => {
-    const users = [];
     const usersSnapshot = await getDocs(usersCollection);
     usersSnapshot.forEach((user) => {
         users.push({ ...user.data(), id: user.id });
@@ -12,9 +12,7 @@ export const getUsers = async () => {
     return users;
 };
 
-export const getusersByUser = async (userId) => {
-    const users = [];
-
+export const getUsersById = async (userId) => {
     const filteredUsersCollection = query(
         usersCollection,
         where("user.uid", "==", userId)
