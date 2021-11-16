@@ -1,5 +1,5 @@
 import { UserContext } from 'context/User'
-import { doc, updateDoc } from 'firebase/firestore'
+import { doc, getDoc, updateDoc } from 'firebase/firestore'
 import React, { useState, useContext } from 'react'
 import db from 'services/firebase.config'
 import { colors } from 'utils/colors'
@@ -8,21 +8,21 @@ const Options = () => {
   const [color, setColor] = useState('')
   const [username, setUsername] = useState('')
 
-  const { user } = useContext(UserContext)
+  const { user, setUser } = useContext(UserContext)
 
   const handleUsername = (e) => {
     setUsername(e.target.value)
   }
 
-  const handleOptions = (e) => {
+  const handleOptions = async (e) => {
     e.preventDefault()
-    console.log(user)
-    const userRef = doc(db, 'users', user.id)
-    updateDoc(userRef, {
-      ...user,
+    const userRef = await doc(db, 'users', user.id)
+    await updateDoc(userRef, {
       username,
       color,
     })
+    const docSnap = await getDoc(userRef)
+    setUser({ id: docSnap.id, ...docSnap.data() })
 
   }
 

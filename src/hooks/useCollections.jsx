@@ -28,7 +28,7 @@ const useCollection = (db, collectionName) => {
   }
   */
 
-  const getData = (db, collectionName) => {
+  const getData = async (db, collectionName) => {
     setIsLoading(true)
     const collectionDocs = collection(db, collectionName)
 
