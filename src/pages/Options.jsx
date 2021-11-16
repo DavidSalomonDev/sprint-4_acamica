@@ -19,6 +19,7 @@ const Options = () => {
     console.log(user)
     const userRef = doc(db, 'users', user.id)
     updateDoc(userRef, {
+      ...user,
       username,
       color,
     })
