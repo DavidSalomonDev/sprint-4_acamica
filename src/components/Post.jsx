@@ -13,14 +13,14 @@ const Post = (props) => {
 
   return (
     <div className='Post' key={id}>
-      <div className='Post__profilePic'>
+      <div className='Post__profilePic' >
         <img src={author.photoURL}
           alt={author.displayName}
-          className='Post__profilePic--image' />
+          className='Post__profilePic--image' style={{ border: `.5rem solid ${author.color}` }} />
       </div>
       <div className='Post__info'>
         <div className='Post__info--data'>
-          <span className='Post__info--username'>{author.username}</span> - <span className='Post__info--date'>{postDate(date)}</span>
+          <span className='Post__info--username' style={{ backgroundColor: `${author.color}` }}>{author.username}</span> - <span className='Post__info--date'>{postDate(date)}</span>
           {user.uid === author.uid && <DeleteBtn id={id} />}
         </div>
         <p className='Post__info--content'>{content}</p>

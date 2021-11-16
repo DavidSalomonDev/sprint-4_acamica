@@ -1,41 +1,40 @@
 .Navbar {
-  align-items: center;
-  background-color: $color-primary;
-  display: flex;
-  height: 6rem;
-  justify-content: space-around;
-  max-width: 100rem;
-  padding: 0 2rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+    align-items: center;
+    background-color: $color-primary;
+    display: flex;
+    height: 6rem;
+    justify-content: space-around;
+    max-width: 100rem;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 
-  &__item {
-	list-style: none;
-	margin: 0 1rem;
+    &__item {
+        list-style: none;
+        margin: 0 1rem;
 
-	&__logo {
-	  height: 1.5rem;
+        &__logo {
+            height: 1.5rem;
 
-	  &.logo--image {
-		height: 2.5rem;
-	  }
-	}
+            &.logo--image {
+                height: 2.5rem;
+            }
+        }
 
-	&__profile {
-	  border: 3px solid $color-red;
-	  border-radius: 50%;
-	  height: 3.5rem;
-	  overflow: hidden;
-	  width: 3.5rem;
+        &__profile {
+            border-radius: 50%;
+            height: 3.5rem;
+            overflow: hidden;
+            width: 3.5rem;
 
-	  &--pic {
-		height: 3rem;
-		object-fit: cover;
-		object-position: 0;
-		width: 3rem;
-	  }
-	}
-  }
+            &--pic {
+                height: 3.5rem;
+                object-fit: cover;
+                object-position: 0;
+                width: 3.5rem;
+            }
+        }
+    }
 }

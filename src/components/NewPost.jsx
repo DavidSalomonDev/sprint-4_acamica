@@ -25,10 +25,10 @@ const NewPost = () => {
       likes: [],
       author: {
         displayName: user.displayName,
-        color: 'yellow',
+        color: user.color,
         photoURL: user.photoURL,
         uid: user.uid,
-        username: 'test',
+        username: user.username,
       },
     }
     addDoc(postsCollection, newDoc)
@@ -38,10 +38,11 @@ const NewPost = () => {
 
   return (
     <section className='NewPost'>
-      <div className='NewPost__picture'>
+      <div className='NewPost__picture' style={{ outline: `.5rem solid ${user.color}` }}>
         <img className='NewPost__picture--image'
           src={user.photoURL}
-          alt={user.displayName} />
+          alt={user.displayName}
+        />
       </div>
       <form className='NewPost__form' onSubmit={handleSubmit}>
         <textarea
