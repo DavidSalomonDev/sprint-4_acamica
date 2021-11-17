@@ -16,8 +16,6 @@ const Navbar = () => {
                  alt = {user.displayName} />
           </div>
         </Link>
-
-
       </li>
       <li className = 'Navbar__item'>
         <Link to = '/' title = 'Home'>

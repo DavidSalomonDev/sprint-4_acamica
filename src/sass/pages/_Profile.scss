@@ -1,5 +1,6 @@
 .Profile {
   @extend .Home;
+  flex-direction: column;
 
   &__user {
 	align-items: center;
@@ -29,5 +30,39 @@
 	font-size: 2rem;
 	padding: 1rem 1.5rem;
 	text-align: center;
+  }
+
+  &__options {
+	align-items: center;
+	background-color: $color-primary-dark;
+	border-bottom: .5rem solid $color-primary-light;
+	display: flex;
+	height: 5rem;
+	justify-content: center;
+	width: 100%;
+
+	& ul {
+	  display: flex;
+	  justify-content: center;
+	  max-width: 65rem;
+	  width: 100%;
+	}
+
+	& li {
+	  cursor: pointer;
+	  font-family: 'Press Start 2P', sans-serif;
+	  font-size: 1.6rem;
+	  letter-spacing: 1px;
+	  list-style: none;
+	  padding: 1.4rem 4rem;
+	  text-align: center;
+	  text-transform: uppercase;
+	  width: 100%;
+	}
+  }
+
+  &__posts {
+	max-width: 65rem;
+	width: 100%;
   }
 }
