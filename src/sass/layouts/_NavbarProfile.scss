@@ -1,0 +1,48 @@
+.NavbarProfile {
+  @extend .Navbar;
+
+  &__username {
+
+	& h3 {
+	  align-items: center;
+	  color: $color-white;
+	  cursor: pointer;
+	  display: flex;
+	  font-size: 1.6rem;
+	}
+
+
+	& span {
+	  font-size: 3rem;
+	  margin-right: 1rem;
+	}
+  }
+
+  &__button {
+	align-items: center;
+	display: flex;
+	width: 13rem;
+
+	& button {
+	  align-items: center;
+	  background-color: $color-red;
+	  display: flex;
+	  font-size: 1.3rem;
+	  justify-content: center;
+	  width: 100%;
+
+	  &:active {
+		transform: scale(0.98);
+	  }
+
+	  &:hover {
+		background-color: $color-white;
+		color: $color-red;
+	  }
+	}
+  }
+
+  &--icon {
+	font-size: 2rem;
+  }
+}

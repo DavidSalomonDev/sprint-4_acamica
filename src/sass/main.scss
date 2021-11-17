@@ -16,6 +16,7 @@
 
 @import 'layouts/Footer';
 @import 'layouts/Navbar';
+@import 'layouts/NavbarProfile';
 @import 'layouts/NewPost';
 @import 'layouts/Postslist';
 
@@ -24,5 +25,6 @@
 @import 'pages/Home';
 @import 'pages/Login';
 @import 'pages/Options';
+@import 'pages/Profile';
 
 @import 'vendors/sweetalert2';

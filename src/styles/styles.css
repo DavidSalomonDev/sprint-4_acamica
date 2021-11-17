@@ -52,6 +52,7 @@ h6 {
   font-family: "Press Start 2P", cursive;
   font-size: 1.5rem;
   height: 3.5rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   width: 10rem;
 }
@@ -200,7 +201,7 @@ h6 {
   color: #F50D5A;
 }
 
-.Navbar {
+.Navbar, .NavbarProfile {
   align-items: center;
   background-color: #2E132C;
   display: flex;
@@ -225,6 +226,7 @@ h6 {
 }
 .Navbar__item__profile {
   border-radius: 50%;
+  cursor: pointer;
   height: 3.5rem;
   overflow: hidden;
   width: 3.5rem;
@@ -234,6 +236,41 @@ h6 {
   object-fit: cover;
   object-position: 0;
   width: 3.5rem;
+}
+
+.NavbarProfile__username h3 {
+  align-items: center;
+  color: #F1F1F1;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.6rem;
+}
+.NavbarProfile__username span {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+.NavbarProfile__button {
+  align-items: center;
+  display: flex;
+  width: 13rem;
+}
+.NavbarProfile__button button {
+  align-items: center;
+  background-color: #F50D5A;
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: center;
+  width: 100%;
+}
+.NavbarProfile__button button:active {
+  transform: scale(0.98);
+}
+.NavbarProfile__button button:hover {
+  background-color: #F1F1F1;
+  color: #F50D5A;
+}
+.NavbarProfile--icon {
+  font-size: 2rem;
 }
 
 .NewPost {
@@ -333,7 +370,7 @@ h6 {
   width: 100%;
 }
 
-.Home {
+.Home, .Profile {
   align-items: center;
   display: flex;
   justify-content: center;

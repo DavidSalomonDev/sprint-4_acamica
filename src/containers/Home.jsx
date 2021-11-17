@@ -1,12 +1,15 @@
-import { Route } from 'react-router-dom'
-import Navbar from 'components/Navbar'
+import Profile from 'pages/Profile'
+import { Route, Switch } from 'react-router-dom'
 import Feed from 'pages/Feed'
 
 const Home = () => {
   return (
     <div className = 'Home'>
-      <Navbar />
-      <Route component = {Feed} path = '/' exact />
+      <Switch>
+        <Route component = {Feed} path = '/' exact />
+        <Route component = {Profile} path = '/profile' exact />
+      </Switch>
+
     </div>
   )
 }
