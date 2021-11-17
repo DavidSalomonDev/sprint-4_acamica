@@ -44,7 +44,7 @@ const useCollection = (db, collectionName) => {
       setError(error.message)
     })
     setIsLoading(false)
-    setTimeout(() => unsub(), 50000)
+    setTimeout(() => unsub(), 50000000)
   }
 
   useEffect(() => {

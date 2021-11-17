@@ -4,6 +4,8 @@ import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
+  setPersistence,
+  browserSessionPersistence,
 } from 'firebase/auth'
 import { addDoc, collection } from 'firebase/firestore'
 import { getUsers } from 'api/users/get'
@@ -12,29 +14,33 @@ import db from 'services/firebase.config'
 
 const Login = () => {
   const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
   const { setUser } = useContext(UserContext)
+  const auth = getAuth()
 
-  const handleUsers = async () => {
+  const handleSession = async () => {
+    setIsLoading(true)
+    await setPersistence(auth, browserSessionPersistence)
     const usuarios = await getUsers()
     setData(usuarios)
+    if (auth.currentUser) {
+      const doesExist = usuarios.find(({ uid }) => uid === auth.currentUser.uid)
+      if (doesExist) {
+        setUser({ id: doesExist.id, ...doesExist })
+      } else {
+        setIsLoading(false)
+      }
+    } else {
+      setIsLoading(false)
+    }
   }
 
   useEffect(() => {
-    handleUsers()
+    handleSession()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // useEffect(() => {
-  //   let isMounted = true
-  //   setPersistence(auth, browserSessionPersistence).then(() => {
-  //     if (isMounted) auth.currentUser && setUser(auth.currentUser)
-  //   })
-  //   return () => {
-  //     isMounted = false
-  //   }
-  // }, [auth, setUser])
-
   const googleAuth = async () => {
-    const auth = getAuth()
     const provider = new GoogleAuthProvider()
     const authResult = await signInWithPopup(auth, provider)
     const userCredentials = authResult.user
@@ -59,20 +65,27 @@ const Login = () => {
       setUser({ id: userDocument.id, ...newUser })
     }
   }
+  if (isLoading) {
+    return (
+      <h1>ITS LOADING ....</h1>
+    )
+  } else {
+    return (
 
-  return (
-    <div className = 'Login'>
-      <img className = 'Login--logo'
-           src = 'https://firebasestorage.googleapis.com/v0/b/devs-united-f1635.appspot.com/o/logo%20big.svg?alt=media&token=c0c257b9-aa85-4b0e-9bff-1274c984f9e6'
-           alt = 'Devs_United' />
-      <h2>A social network for Developers</h2>
-      <p>This is a project created by David Salomón for Acamica in Sprint 4.</p>
-      <GoogleBtn onClick = {googleAuth} />
-      <footer className = 'Footer'>
-        <p>&#169; 2021 Devs_United by David Salomón - <span>BETA</span></p>
-      </footer>
-    </div>
-  )
+      <div className = 'Login'>
+        <img className = 'Login--logo'
+             src = 'https://firebasestorage.googleapis.com/v0/b/devs-united-f1635.appspot.com/o/logo%20big.svg?alt=media&token=c0c257b9-aa85-4b0e-9bff-1274c984f9e6'
+             alt = 'Devs_United' />
+        <h2>A social network for Developers</h2>
+        <p>This is a project created by David Salomón for Acamica in Sprint 4.</p>
+        <GoogleBtn onClick = {googleAuth} />
+        <footer className = 'Footer'>
+          <p>&#169; 2021 Devs_United by David Salomón - <span>BETA</span></p>
+        </footer>
+      </div>
+    )
+  }
+
 }
 
 export default Login
