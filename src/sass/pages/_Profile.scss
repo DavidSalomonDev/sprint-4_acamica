@@ -1,3 +1,33 @@
 .Profile {
   @extend .Home;
+
+  &__user {
+	align-items: center;
+	background-color: $color-primary-dark;
+	display: flex;
+	flex-direction: column;
+	height: 35rem;
+	justify-content: center;
+	margin-top: 6rem;
+	width: 100%;
+  }
+
+  &__picture {
+	height: 17rem;
+	margin-bottom: 4rem;
+	width: 17rem;
+
+	& img {
+	  background-size: contain;
+	  border-radius: 50%;
+	  width: 100%;
+	}
+  }
+
+  & h3 {
+	border-radius: .5rem;
+	font-size: 2rem;
+	padding: 1rem 1.5rem;
+	text-align: center;
+  }
 }
