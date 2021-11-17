@@ -188,9 +188,8 @@ h6 {
 }
 
 .Footer {
-  bottom: 1rem;
+  margin-top: 5rem;
   color: #60265B;
-  position: absolute;
   text-align: center;
   width: 100%;
 }
@@ -356,10 +355,16 @@ h6 {
 .Login__button {
   margin: 2rem;
 }
-.Login h2, .Login p {
+.Login h2,
+.Login p {
   line-height: 1.7;
   padding: 2rem;
   text-align: center;
+}
+.Login__loading {
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 .Options {

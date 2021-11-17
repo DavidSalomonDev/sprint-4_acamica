@@ -11,6 +11,7 @@ import { addDoc, collection } from 'firebase/firestore'
 import { getUsers } from 'api/users/get'
 import React, { useContext, useEffect, useState } from 'react'
 import db from 'services/firebase.config'
+import Loader from 'react-loader-spinner'
 
 const Login = () => {
   const [data, setData] = useState([])
@@ -65,21 +66,29 @@ const Login = () => {
       setUser({ id: userDocument.id, ...newUser })
     }
   }
+
   if (isLoading) {
     return (
-      <h1>ITS LOADING ....</h1>
+      <div className='Login__loading'>
+        <Loader type="TailSpin"
+          color="#FFF"
+          height={200}
+          width={200}
+          timeout={3000} />
+      </div>
+
     )
   } else {
     return (
 
-      <div className = 'Login'>
-        <img className = 'Login--logo'
-             src = 'https://firebasestorage.googleapis.com/v0/b/devs-united-f1635.appspot.com/o/logo%20big.svg?alt=media&token=c0c257b9-aa85-4b0e-9bff-1274c984f9e6'
-             alt = 'Devs_United' />
+      <div className='Login'>
+        <img className='Login--logo'
+          src='https://firebasestorage.googleapis.com/v0/b/devs-united-f1635.appspot.com/o/logo%20big.svg?alt=media&token=c0c257b9-aa85-4b0e-9bff-1274c984f9e6'
+          alt='Devs_United' />
         <h2>A social network for Developers</h2>
         <p>This is a project created by David Salomón for Acamica in Sprint 4.</p>
-        <GoogleBtn onClick = {googleAuth} />
-        <footer className = 'Footer'>
+        <GoogleBtn onClick={googleAuth} />
+        <footer className='Footer'>
           <p>&#169; 2021 Devs_United by David Salomón - <span>BETA</span></p>
         </footer>
       </div>

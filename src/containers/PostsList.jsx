@@ -29,14 +29,20 @@ const PostsList = () => {
 
   const postsDB = data.map((post) => {
     return (
-      <Post key = {post.id}
-            {...post} />
+      <Post key={post.id}
+        {...post} />
     )
   })
 
   return (
-    <div className = 'PostsList'>
-      {isLoading && <Loader type = 'ThreeDots' color = '#FFF' height = {180} width = {180} />}
+    <div className='PostsList'>
+      {isLoading && <div className='Login__loading'>
+        <Loader type="TailSpin"
+          color="#FFF"
+          height={200}
+          width={200}
+          timeout={3000} />
+      </div>}
       {error ? <h1>{error}</h1> : postsDB}
     </div>
   )

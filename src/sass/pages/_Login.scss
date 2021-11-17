@@ -7,17 +7,24 @@
   justify-content: center;
 
   &--logo {
-	height: 25rem;
-	width: 25rem;
+    height: 25rem;
+    width: 25rem;
   }
 
   &__button {
-	margin: 2rem;
+    margin: 2rem;
   }
 
-  h2, p {
-	line-height: 1.7;
-	padding: 2rem;
-	text-align: center;
+  h2,
+  p {
+    line-height: 1.7;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  &__loading {
+    display: grid;
+    place-items: center;
+    height: 100vh;
   }
 }
