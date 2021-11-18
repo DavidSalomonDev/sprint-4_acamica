@@ -483,6 +483,66 @@ h6 {
   width: 100%;
 }
 
+.Profile {
+  flex-direction: column;
+}
+.Profile__user {
+  align-items: center;
+  background-color: #150714;
+  display: flex;
+  flex-direction: column;
+  height: 35rem;
+  justify-content: center;
+  margin-top: 6rem;
+  width: 100%;
+}
+.Profile__picture {
+  height: 17rem;
+  margin-bottom: 4rem;
+  width: 17rem;
+}
+.Profile__picture img {
+  background-size: contain;
+  border-radius: 50%;
+  width: 100%;
+}
+.Profile h3 {
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+.Profile__options {
+  align-items: center;
+  background-color: #150714;
+  border-bottom: 0.5rem solid #60265B;
+  display: flex;
+  height: 5rem;
+  justify-content: center;
+  width: 100%;
+}
+.Profile__options ul {
+  display: flex;
+  justify-content: center;
+  max-width: 65rem;
+  width: 100%;
+}
+.Profile__options li {
+  cursor: pointer;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  list-style: none;
+  padding: 1.4rem 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+.Profile__posts {
+  max-width: 65rem;
+  width: 100%;
+}
+
 .swal2-container .swal2-title {
   font-size: 2.1rem;
   line-height: 1.4;
