@@ -3,13 +3,17 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import { Logout } from 'services/auth'
+import { useHistory } from 'react-router-dom'
 
 const NavbarProfile = () => {
 
   const { user, setUser } = useContext(UserContext)
 
+  const history = useHistory()
+
   const handleLogout = async () => {
     await Logout()
+    history.push('/')
     setUser({})
   }
 
