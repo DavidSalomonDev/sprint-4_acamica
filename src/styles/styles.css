@@ -506,8 +506,9 @@ h6 {
   border-radius: 50%;
   width: 100%;
 }
-.Profile h3 {
+.Profile h4 {
   border-radius: 0.5rem;
+  color: #150714;
   font-size: 2rem;
   padding: 1rem 1.5rem;
   text-align: center;

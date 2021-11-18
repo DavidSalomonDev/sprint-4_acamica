@@ -24,7 +24,7 @@ const Profile = () => {
         <div className = 'Profile__picture'>
           <img src = {user.photoURL} alt = {user.displayName} style = {{ outline: `1rem solid ${user.color}` }} />
         </div>
-        <h3 style = {{ backgroundColor: `${user.color}` }}>{user.displayName}</h3>
+        <h4 style = {{ backgroundColor: `${user.color}` }}>{user.displayName}</h4>
       </div>
       <nav className = 'Profile__options'>
         <ul>

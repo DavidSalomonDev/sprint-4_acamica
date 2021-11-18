@@ -2,10 +2,16 @@ import { UserContext } from 'context/User'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
+import { Logout } from 'services/auth'
 
 const NavbarProfile = () => {
 
-  const { user } = useContext(UserContext)
+  const { user, setUser } = useContext(UserContext)
+
+  const handleLogout = async () => {
+    await Logout()
+    setUser({})
+  }
 
   return (
     <nav className = 'NavbarProfile'>
@@ -15,7 +21,7 @@ const NavbarProfile = () => {
         </div>
       </Link>
       <div className = 'NavbarProfile__button'>
-        <button className = 'button'>Logout <ExitToAppIcon fontSize = 'large' /></button>
+        <button onClick = {handleLogout} className = 'button'>Logout <ExitToAppIcon fontSize = 'large' /></button>
       </div>
 
     </nav>
