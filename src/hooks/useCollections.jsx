@@ -4,8 +4,8 @@ import sortDate from 'utils/sortDate'
 
 const useCollection = (db, collectionName) => {
   const [data, setData] = useState([])
-  const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     try {
@@ -33,7 +33,7 @@ const useCollection = (db, collectionName) => {
 
   }, [db, collectionName])
 
-  return [data, error, isLoading]
+  return [data, isLoading, error]
 }
 
 export default useCollection
