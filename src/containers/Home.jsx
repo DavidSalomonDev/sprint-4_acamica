@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className = 'Home'>
       <Switch>
-        <Route component = {Feed} path = '/feed' exact />
+        <Route component = {Feed} path = '/' exact />
         <Route component = {Profile} path = '/profile' exact />
       </Switch>
 
