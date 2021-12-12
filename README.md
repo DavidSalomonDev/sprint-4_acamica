@@ -17,14 +17,25 @@ Al tener una interfaz muy sencilla, pues me quedaré con los estilos CSS tambié
 ## Desarrollo
 
 1. Crear los folders con las distintas funcionalidades en la aplicación.
+2. Conectar la base de datos con el proyecto
+3. Diseñar los elementos visuales
+   a. Components: Son elementos reusables. Ejemplo: Buttons, Profile Pic.
+   b. Containers: Son elementos que contienen componentes. Ejemplo: Header, Main, PostList
+   c. Pages: Son las vistas a las que React Router hace referencia
+4. Crear la lógica de la funcionalidad de los componentes
+5. Crear las APIs para la interacción de la base de datos
+6. Opcional - Crear las reglas de autenticación de Firebase
+7. Opcional - Crear variables de ambiente que guarde las credenciales de Firebase
 
 ## Obstáculos
 
-1. .
+1. Crear un contexto de usuario que obtenga la información de la cuenta de Google
+2. Conteo de likes
 
 ## Conclusión
 
-1. .
+1. La separación de archivos en folders ha sido muy útil para evitar componentes anidados
+2. La lógica debe de estar separada de lo visual
 
 ## Enlaces
 
